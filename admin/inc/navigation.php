@@ -49,9 +49,9 @@
               </li>
               <li class="nav-item dropdown">
                 <a href="<?php echo base_url ?>admin/?page=product" class="nav-link nav-product">
-                  <i class="nav-icon fas fa-book-open"></i>
+                  <i class="nav-icon fas fa-layer-group"></i>
                   <p>
-                    Book List
+                    Product List
                   </p>
                 </a>
               </li>

@@ -41,7 +41,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 </select>
 			</div>
 			<div class="form-group">
-				<label for="title" class="control-label">Book Title</label>
+				<label for="title" class="control-label">Name of the product</label>
                 <textarea name="title" id="" cols="30" rows="2" class="form-control form no-resize"><?php echo isset($title) ? $title : ''; ?></textarea>
 			</div>
 			<div class="form-group">

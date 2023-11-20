@@ -151,7 +151,7 @@ Class Master extends DBConnection {
 			return $this->capture_err();
 		if($check > 0){
 			$resp['status'] = 'failed';
-			$resp['msg'] = "Book already exist.";
+			$resp['msg'] = "Product already exist.";
 			return json_encode($resp);
 			exit;
 		}
@@ -176,9 +176,9 @@ Class Master extends DBConnection {
 			}
 			$resp['status'] = 'success';
 			if(empty($id))
-				$this->settings->set_flashdata('success',"New Book successfully saved.");
+				$this->settings->set_flashdata('success',"New Product successfully saved.");
 			else
-				$this->settings->set_flashdata('success',"Book successfully updated.");
+				$this->settings->set_flashdata('success',"Product successfully updated.");
 		}else{
 			$resp['status'] = 'failed';
 			$resp['err'] = $this->conn->error."[{$sql}]";

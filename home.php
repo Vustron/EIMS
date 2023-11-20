@@ -2,7 +2,7 @@
  <header class="bg-dark py-5" id="main-header">
      <div class="container px-4 px-lg-5 my-5">
          <div class="text-center text-white">
-             <h1 class="display-4 fw-bolder">Unleash your inner bookworm at Online Bookstore Management System!</h1>
+             <h1 class="display-4 fw-bolder">Welcome to a New Vision of Precision: IonSpec Medical Eyewear - Where Innovation Meets Clarity in the World of Medical Optics!</h1>
              <p class="lead fw-bolder text-white-50 mb-0">Shop Now!</p>
          </div>
      </div>
@@ -14,7 +14,7 @@
          height: auto !important;
      }
  </style>
- <section class="py-5 bg-warning">
+ <section class="py-5 bg-light">
      <div class="container px-4 px-lg-5 mt-5">
          <div class="row gx-4 gx-lg-5 row-cols-md-3 row-cols-xl-4 justify-content-center">
              <?php
