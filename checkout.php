@@ -6,7 +6,7 @@ $total = 0;
         $total += $row['price'] * $row['quantity'];
     endwhile;
 ?>
-<section class="py-5 bg-warning">
+<section class="py-5 bg-light">
     <div class="container">
         <div class="card rounded-0">
             <div class="card-body"></div>

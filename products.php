@@ -31,7 +31,7 @@ if (isset($_GET['c']) && isset($_GET['s'])) {
 }
 ?>
 <!-- Header-->
-<header class="bg-dark py-5 " id="main-header">
+<header class="bg-light py-5 " id="main-header">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder"><?php echo $title ?></h1>
@@ -40,12 +40,12 @@ if (isset($_GET['c']) && isset($_GET['s'])) {
     </div>
 </header>
 <!-- Section-->
-<section class="py-5 bg-warning">
+<section class="py-5 bg-light">
     <div class="container-fluid row">
         <?php if (isset($_GET['c'])) : ?>
             <div class="col-md-3 border-right mb-2 pb-3">
                 <h3><b>Sub Categories</b></h3>
-                <div class="list-group text-white">
+                <div class="list-group text-dark">
                     <a href="./?p=products&c=<?php echo $_GET['c'] ?>" class="list-group-item <?php echo !isset($_GET['s']) ? "active" : "" ?>">All</a>
                     <?php
                     $sub_cat = $conn->query("SELECT * FROM `sub_categories` where md5(parent_id) =  '{$_GET['c']}' ");
@@ -61,11 +61,11 @@ if (isset($_GET['c']) && isset($_GET['s'])) {
             <div class="container-fluid p-0">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active bg-warning text-white" id="book-tab" data-toggle="tab" href="#book" role="tab" aria-controls="book" aria-selected="true">Books</a>
+                        <a class="nav-link active bg-light text-dark" id="book-tab" data-toggle="tab" href="#book" role="tab" aria-controls="book" aria-selected="true">Products</a>
                     </li>
                     <?php if (isset($_GET['c'])) : ?>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link bg-warning text-white" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="false">Details</a>
+                            <a class="nav-link bg-light text-dark" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="false">Details</a>
                         </li>
                     <?php endif; ?>
                 </ul>
@@ -73,7 +73,7 @@ if (isset($_GET['c']) && isset($_GET['s'])) {
                     <div class="tab-pane fade show active" id="book">
                         <?php
                         if (isset($_GET['search'])) {
-                            echo "<h4 class='text-center text-white'><b>Search Result for '" . $_GET['search'] . "'</b></h4>";
+                            echo "<h4 class='text-center text-dark'><b>Search Result for '" . $_GET['search'] . "'</b></h4>";
                         }
                         ?>
 
@@ -136,20 +136,20 @@ if (isset($_GET['c']) && isset($_GET['s'])) {
                             <?php endwhile; ?>
                             <?php
                             if ($products->num_rows <= 0) {
-                                echo "<h4 class='text-center text-white'><b>No Product Listed.</b></h4>";
+                                echo "<h4 class='text-center text-dark'><b>No Product Listed.</b></h4>";
                             }
                             ?>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="details">
-                        <h3 class="text-center text-white"><?php echo $title . " Category" ?></h3>
+                        <h3 class="text-center text-dark"><?php echo $title . " Category" ?></h3>
                         <hr>
-                        <div class="text-white">
+                        <div class="text-dark">
                             <?php echo isset($cat_description) ? stripslashes(html_entity_decode($cat_description)) : '' ?>
                         </div>
-                        <h3 class="text-center text-white"><?php echo $sub_title ?></h3>
+                        <h3 class="text-center text-dark"><?php echo $sub_title ?></h3>
                         <hr>
-                        <div class="text-white">
+                        <div class="text-dark">
                             <?php echo isset($sub_cat_description) ? stripslashes(html_entity_decode($sub_cat_description)) : '' ?>
                         </div>
                     </div>

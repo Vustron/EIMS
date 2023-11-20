@@ -41,7 +41,7 @@
      }             
  }
 ?>
-<section class="py-5 bg-warning text-white">
+<section class="py-5 bg-light text-dark">
     <div class="container px-4 px-lg-5 my-5">
         
         <div class="row gx-4 gx-lg-5 align-items-center">
@@ -97,7 +97,7 @@
                   
       
 <!-- Related items section-->
-<section class="py-5 bg-warning text-white">
+<section class="py-5 bg-light text-dark">
     <div class="container px-4 px-lg-5 mt-5">
         <h2 class="fw-bolder mb-4">Related products</h2>
         <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">

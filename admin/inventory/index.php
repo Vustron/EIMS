@@ -24,7 +24,7 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Book</th>
+						<th>Product</th>
 						<th>Price</th>
 						<th>Stock</th>
 						<th>Action</th>
