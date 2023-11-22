@@ -34,13 +34,13 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Order ID</th>
-                                            <th>Order Type</th>
-                                            <th>Delivery Address</th>
-                                            <th>Payment Method</th>
-                                            <th>Amount</th>
-                                            <th>Products</th>
+                                            <th class="text-center text-sm">#</th>
+                                            <th class="text-center text-sm">Order ID</th>
+                                            <th class="text-center text-sm">Order Type</th>
+                                            <th class="text-center text-sm">Address</th>
+                                            <th class="text-center text-sm">Method</th>
+                                            <th class="text-center text-sm">Amount</th>
+                                            <th class="text-center text-sm">Products</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -50,14 +50,14 @@
                                         while ($row = $qry->fetch_assoc()) :
                                         ?>
                                             <tr>
-                                                <td class="text-center"><?php echo $count ?></td>
-                                                <td><?php echo $row['order_id'] ?></td>
-                                                <td><?php echo $row['order_type'] ?></td>
-                                                <td><?php echo $row['delivery_address'] ?></td>
-                                                <td><?php echo $row['payment_method'] ?></td>
-                                                <td><?php echo "₱";
+                                                <td class="text-center text-sm"><?php echo $count ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['order_id'] ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['order_type'] ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['delivery_address'] ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['payment_method'] ?></td>
+                                                <td class="text-center text-sm"><?php echo "₱";
                                                     echo $row['amount'] ?></td>
-                                                <td><?php echo $row['products'] ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['products'] ?></td>
                                             </tr>
                                         <?php
                                             $count++;
@@ -97,12 +97,12 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Order ID</th>
-                                            <th>Order Type</th>
-                                            <th>Delivery Address</th>
-                                            <th>Amount</th>
-                                            <th>Date Created</th>
+                                            <th class="text-center text-sm">#</th>
+                                            <th class="text-center text-sm">Order ID</th>
+                                            <th class="text-center text-sm">Order Type</th>
+                                            <th class="text-center text-sm">Delivery Address</th>
+                                            <th class="text-center text-sm">Amount</th>
+                                            <th class="text-center text-sm">Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -112,12 +112,12 @@
                                         while ($row = $qry->fetch_assoc()) :
                                         ?>
                                             <tr>
-                                                <td class="text-center"><?php echo $count ?></td>
-                                                <td><?php echo $row['order_id'] ?></td>
-                                                <td><?php echo $row['order_type'] ?></td>
-                                                <td><?php echo $row['delivery_address'] ?></td>
-                                                <td><?php echo "₱" . number_format($row['amount'], 2) ?></td>
-                                                <td><?php echo $row['date_created'] ?></td>
+                                                <td class="text-center text-sm"><?php echo $count ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['order_id'] ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['order_type'] ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['delivery_address'] ?></td>
+                                                <td class="text-center text-sm"><?php echo "₱" . number_format($row['amount'], 2) ?></td>
+                                                <td class="text-center text-sm"><?php echo $row['date_created'] ?></td>
                                             </tr>
                                         <?php
                                             $count++;
@@ -222,7 +222,7 @@
 
         // Create the bar chart using Chart.js
         new Chart("info-table2", {
-            type: 'bar',
+            type: 'pie',
             data: {
                 labels: <?php echo json_encode($labels); ?>,
                 datasets: [{
@@ -288,7 +288,7 @@
 
         // Create the bar chart using Chart.js
         new Chart("info-table4", {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: ['Total Pending Orders'],
                 datasets: [{

@@ -24,12 +24,12 @@
 				</colgroup>
 				<thead>
 					<tr>
-						<th>#</th>
-						<th>Date Created</th>
-						<th>Category</th>
-						<th>Description</th>
-						<th>Status</th>
-						<th>Action</th>
+						<th class="text-center text-sm">#</th>
+						<th class="text-center text-sm">Date Created</th>
+						<th class="text-center text-sm">Category</th>
+						<th class="text-center text-sm">Description</th>
+						<th class="text-center text-sm">Status</th>
+						<th class="text-center text-sm">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -40,11 +40,11 @@
                             $row['description'] = strip_tags(stripslashes(html_entity_decode($row['description'])));
 					?>
 						<tr>
-							<td class="text-center"><?php echo $i++; ?></td>
-							<td><?php echo date("Y-m-d H:i",strtotime($row['date_created'])) ?></td>
-							<td><?php echo $row['category'] ?></td>
-							<td ><p class="truncate-1 m-0"><?php echo $row['description'] ?></p></td>
-							<td class="text-center">
+							<td class="text-center text-sm"><?php echo $i++; ?></td>
+							<td class="text-center text-sm"><?php echo date("Y-m-d H:i",strtotime($row['date_created'])) ?></td>
+							<td class="text-center text-sm"><?php echo $row['category'] ?></td>
+							<td class="text-center text-sm"><p class="truncate-1 m-0"><?php echo $row['description'] ?></p></td>
+							<td class="text-center text-sm">
                                 <?php if($row['status'] == 1): ?>
                                     <span class="badge badge-success">Active</span>
                                 <?php else: ?>
