@@ -4,7 +4,7 @@
         height: 27px;
         width: 27px;
         object-fit: cover;
-        left: -7%;
+        left: -17%;
         top: -12%;
   }
   .btn-rounded{
