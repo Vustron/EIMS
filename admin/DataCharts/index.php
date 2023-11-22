@@ -2,7 +2,7 @@
 <div class="row">
 
     <div class="col-6 col-lg-12">
-        <div class="info-box mb-3">
+        <div class="info-box mb-3 bg-white">
             <div class="info-box-content">
                 <h4 class="text-center"><b>Inventory Status</b></h4>
                 <canvas id="info-table1"></canvas>
@@ -11,16 +11,16 @@
     </div>
 
     <div class="col-6 col-lg-12">
-        <div class="info-box mb-3">
+        <div class="info-box mb-3 bg-white">
             <div class="info-box-content">
 
                 <div class="card card-outline card-primary">
-                    <div class="card-header">
+                    <div class="card-header bg-white">
                         <h4 class="text-center">Order Details</h4>
                     </div>
 
-                    <div class="card-body">
-                        <div class="container-fluid">
+                    <div class="card-body bg-white">
+                        <div class="container-fluid bg-white">
                             <div class="container-fluid">
                                 <table class="table table-bordered table-stripped">
                                     <colgroup>
@@ -77,13 +77,13 @@
     <div class="clearfix hidden-md-up"></div>
 
     <div class="col-6 col-lg-12">
-        <div class="info-box mb-3">
+        <div class="info-box mb-3 bg-white">
             <div class="info-box-content">
                 <div class="card card-outline card-primary">
-                    <div class="card-header">
+                    <div class="card-header bg-white">
                         <h4 class="text-center">Pending Orders</h4>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body bg-white">
                         <div class="container-fluid">
                             <div class="container-fluid">
                                 <table class="table table-bordered table-stripped">
@@ -135,7 +135,7 @@
     </div>
 
     <div class="col-6 col-lg-12">
-        <div class="info-box mb-3">
+        <div class="info-box mb-3 bg-white">
             <div class="info-box-content">
                 <h4 class="text-center"><b>Popular Products</b></h4>
                 <canvas id="info-table2"></canvas>
@@ -144,7 +144,7 @@
     </div>
 
     <div class="col-6 col-lg-12">
-        <div class="info-box mb-3">
+        <div class="info-box mb-3 bg-white">
             <div class="info-box-content">
                 <h4 class="text-center"><b>Sales By Date</b></h4>
                 <canvas id="info-table3"></canvas>

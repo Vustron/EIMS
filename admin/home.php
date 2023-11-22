@@ -1,12 +1,13 @@
-<h1 style="color: white; font-size: 30px;"><strong>Welcome to <?php echo $_settings->info('name') ?></h1>
+<h1 style=" font-size: 30px;"><strong>Welcome to <?php echo $_settings->info('name') ?></h1>
 <hr>
 <div class="row">
   <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box">
-      <span class="info-box-icon bg-light elevation-1"><i class="fas fa-book-open"></i></span>
-
+    <div class="info-box bg-white">
+      <span class="info-box-icon bg-success elevation-1">
+        <i class="fas fa-tag"></i>
+      </span>
       <div class="info-box-content">
-        <span class="info-box-text">Total Books</span>
+        <span class="info-box-text">Total Products</span>
         <span class="info-box-number">
           <?php
           $inv = $conn->query("SELECT sum(quantity) as total FROM inventory ")->fetch_assoc()['total'];
@@ -22,9 +23,10 @@
   </div>
   <!-- /.col -->
   <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-info elevation-1"><i class="fas fa-th-list"></i></span>
-
+    <div class="info-box bg-white mb-3">
+      <span class="info-box-icon bg-info elevation-1">
+        <i class="fas fa-th-list"></i>
+      </span>
       <div class="info-box-content">
         <span class="info-box-text">Pending Orders</span>
         <span class="info-box-number">
@@ -44,9 +46,10 @@
   <div class="clearfix hidden-md-up"></div>
 
   <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
-
+    <div class="info-box mb-3 bg-white">
+      <span class="info-box-icon bg-success elevation-1">
+        <i class="fas fa-shopping-cart"></i>
+      </span>
       <div class="info-box-content">
         <span class="info-box-text">Total Sales</span>
         <span class="info-box-number">
@@ -63,9 +66,10 @@
   </div>
 
   <div class="col-12 col-sm-6 col-md-3">
-    <div class="info-box mb-3">
-      <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-users"></i></span>
-
+    <div class="info-box mb-3 bg-white">
+      <span class="info-box-icon bg-primary elevation-1">
+        <i class="fas fa-users"></i>
+      </span>
       <div class="info-box-content">
         <span class="info-box-text">Total Users</span>
         <span class="info-box-number">

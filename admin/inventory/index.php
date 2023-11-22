@@ -23,11 +23,11 @@
 				</colgroup>
 				<thead>
 					<tr>
-						<th>#</th>
-						<th>Product</th>
-						<th>Price</th>
-						<th>Stock</th>
-						<th>Action</th>
+						<th class="text-center text-sm">#</th>
+						<th class="text-center text-sm">Product</th>
+						<th class="text-center text-sm">Price</th>
+						<th class="text-center text-sm">Stock</th>
+						<th class="text-center text-sm">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -43,13 +43,13 @@
 						}
 					?>
 						<tr>
-							<td class="text-center"><?php echo $i++; ?></td>
+							<td class="text-center text-sm"><?php echo $i++; ?></td>
 							<td>
 								<p class="m-0"><small><b>Title:</b> <?php echo $row['product'] ?></small></p>
 								<p class="m-0 truncate"><b>Author:</b> <?php echo $row['author'] ?></p>
 							</td>
-							<td class="text-right">₱<?php echo number_format($row['price']) ?></td>
-							<td class="text-right"><?php echo $avail ?></td>
+							<td class="text-center text-sm">₱<?php echo number_format($row['price']) ?></td>
+							<td class="text-center text-sm"><?php echo $avail ?></td>
 							<td align="center">
 								 <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 				                  		Action

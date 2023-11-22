@@ -9,15 +9,15 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 }
 ?>
 <div class="card card-outline card-info">
-	<div class="card-header">
+	<div class="card-header bg-white">
 		<h3 class="card-title"><?php echo isset($id) ? "Update ": "Create New " ?> Product</h3>
 	</div>
-	<div class="card-body">
+	<div class="card-body bg-white">
 		<form action="" id="product-form">
 			<input type="hidden" name ="id" value="<?php echo isset($id) ? $id : '' ?>">
-            <div class="form-group">
+            <div class="form-group bg-white">
 				<label for="category_id" class="control-label">Category</label>
-                <select name="category_id" id="category_id" class="custom-select select2" required>
+                <select name="category_id" id="category_id" class="custom-select select2 bg-white" required>
                 <option value=""></option>
                 <?php
                     $qry = $conn->query("SELECT * FROM `categories` order by category asc");
@@ -27,10 +27,10 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 <?php endwhile; ?>
                 </select>
 			</div>
-            <div class="form-group">
+            <div class="form-group bg-white">
 				<label for="sub_category_id" class="control-label">Sub Category</label>
-                <select name="sub_category_id" id="sub_category_id" class="custom-select" required>
-                <option value="" selected="" disabled="">Select Category First</option>
+                <select name="sub_category_id" id="sub_category_id" class="custom-select bg-white" required>
+                <option value="" class="bg-white" selected="" disabled="">Select Category First</option>
                 <?php
                     $qry = $conn->query("SELECT * FROM `sub_categories` order by sub_category asc");
                     $sub_categories = array();
@@ -40,30 +40,30 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                 ?>
                 </select>
 			</div>
-			<div class="form-group">
-				<label for="title" class="control-label">Name of the product</label>
-                <textarea name="title" id="" cols="30" rows="2" class="form-control form no-resize"><?php echo isset($title) ? $title : ''; ?></textarea>
+			<div class="form-group bg-white">
+				<label for="title" class="control-label bg-white">Name of the product</label>
+                <textarea name="title" id="" cols="30" rows="2" class="form-control bg-white form no-resize"><?php echo isset($title) ? $title : ''; ?></textarea>
 			</div>
-			<div class="form-group">
-            <label for="author" class="control-label">Authors</label>
+			<div class="form-group bg-white">
+            <label for="author" class="control-label bg-white">Authors</label>
                 <small>(<i>Use comma (,) for seperating the name of Authors</i>)</small>
-                <textarea name="author" id="" cols="30" rows="2" class="form-control form no-resize"><?php echo isset($author) ? $author : ''; ?></textarea>
+                <textarea name="author" id="" cols="30" rows="2" class="form-control bg-white form no-resize bg-white"><?php echo isset($author) ? $author : ''; ?></textarea>
 			</div>
-            <div class="form-group">
+            <div class="form-group bg-white">
 				<label for="description" class="control-label">Description</label>
-                <textarea name="description" id="" cols="30" rows="2" class="form-control form no-resize summernote"><?php echo isset($description) ? $description : ''; ?></textarea>
+                <textarea name="description" id="" cols="30" rows="2" class="form-control bg-white form no-resize summernote"><?php echo isset($description) ? $description : ''; ?></textarea>
 			</div>
-            <div class="form-group">
+            <div class="form-group bg-white">
 				<label for="status" class="control-label">Status</label>
-                <select name="status" id="status" class="custom-select selevt">
+                <select name="status" id="status" class="custom-select select bg-white">
                 <option value="1" <?php echo isset($status) && $status == 1 ? 'selected' : '' ?>>Active</option>
                 <option value="0" <?php echo isset($status) && $status == 0 ? 'selected' : '' ?>>Inactive</option>
                 </select>
 			</div>
             <div class="form-group">
 				<label for="" class="control-label">Images</label>
-				<div class="custom-file">
-	              <input type="file" class="custom-file-input rounded-circle" id="customFile" name="img[]" multiple accept="image/*" onchange="displayImg(this,$(this))">
+				<div class="custom-file bg-white">
+	              <input type="file" class="custom-file-input bg-white rounded-circle" id="customFile" name="img[]" multiple accept="image/*" onchange="displayImg(this,$(this))">
 	              <label class="custom-file-label" for="customFile">Choose file</label>
 	            </div>
 			</div>
@@ -81,9 +81,9 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                     
                 
             ?>
-                <div class="d-flex w-100 align-items-center img-item">
+                <div class="d-flex w-100 align-items-center img-item bg-white">
                     <span><img src="<?php echo base_url.$upload_path.'/'.$img ?>" width="150px" height="100px" style="object-fit:cover;" class="img-thumbnail" alt=""></span>
-                    <span class="ml-4"><button class="btn btn-sm btn-default text-danger rem_img" type="button" data-path="<?php echo base_app.$upload_path.'/'.$img ?>"><i class="fa fa-trash"></i></button></span>
+                    <span class="ml-4"><button class="btn btn-sm btn-white text-danger rem_img" type="button" data-path="<?php echo base_app.$upload_path.'/'.$img ?>"><i class="fa fa-trash"></i></button></span>
                 </div>
             <?php endforeach; ?>
             <?php endif; ?>
@@ -91,9 +91,9 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 			
 		</form>
 	</div>
-	<div class="card-footer">
-		<button class="btn btn-flat btn-primary" form="product-form">Save</button>
-		<a class="btn btn-flat btn-default" href="?page=product">Cancel</a>
+	<div class="card-footer bg-white">
+		<button class="btn btn-flat btn-success" form="product-form">Save</button>
+		<a class="btn btn-flat btn-danger" href="?page=product">Cancel</a>
 	</div>
 </div>
 <script>

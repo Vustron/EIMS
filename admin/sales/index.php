@@ -23,7 +23,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                     <input type="date" class="form-control form-control-sm" name="date_end" value="<?php echo date("Y-m-d",strtotime($date_end)) ?>">
                 </div>
                 <div class="form-group col-md-1">
-                    <button class="btn btn-flat btn-block btn-primary btn-sm"><i class="fa fa-filter"></i> Filter</button>
+                    <button class="btn btn-flat btn-block btn-primary btn-sm"><i class="fa fa-filter"></i>Filter</button>
                 </div>
                 <div class="form-group col-md-1">
                     <button class="btn btn-flat btn-block btn-success btn-sm" type="button" id="printBTN"><i class="fa fa-print"></i> Print</button>
@@ -33,9 +33,9 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
         <hr>
         <div id="printable">
             <div>
-                <h4 class="text-center m-0"><?php echo $_settings->info('name') ?></h4>
-                <h3 class="text-center m-0"><b>Sales Report</b></h3>
-                <p class="text-center m-0">Date Between <?php echo $date_start ?> and <?php echo $date_end ?></p>
+                <h4 class="text-center text-md m-2"><?php echo $_settings->info('name') ?></h4>
+                <h3 class="text-center text-md m-2"><b>Sales Report</b></h3>
+                <p class="text-center text-md m-2">Date Between <?php echo $date_start ?> and <?php echo $date_end ?></p>
                 <hr>
             </div>
             <table class="table table-bordered">
@@ -49,12 +49,12 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Date Time</th>
-                        <th>Book</th>
-                        <th>Client</th>
-                        <th>QTY</th>
-                        <th>Amount</th>
+                        <th class="text-center text-sm">#</th>
+                        <th class="text-center text-sm">Date Time</th>
+                        <th class="text-center text-sm">Product</th>
+                        <th class="text-center text-sm">Client</th>
+                        <th class="text-center text-sm">QTY</th>
+                        <th class="text-center text-sm">Amount</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -66,7 +66,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                             while($roww = $olist->fetch_assoc()):
                     ?>
                     <tr>
-                        <td class="text-center"><?php echo $i++ ?></td>
+                        <td class="text-center text-sm"><?php echo $i++ ?></td>
                         <td><?php echo $row['date_created'] ?></td>
                         <td>
                             <p class="m-0"><?php echo $roww['title'] ?></p>
@@ -76,14 +76,14 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                             <p class="m-0"><?php echo $roww['name'] ?></p>
                             <p class="m-0"><small>Email: <?php echo $roww['email'] ?></small></p>
                         </td>
-                        <td class="text-center"><?php echo $roww['quantity'] ?></td>
-                        <td class="text-right">₱<?php echo number_format($roww['quantity'] * $roww['price']) ?></td>
+                        <td class="text-center text-sm"><?php echo $roww['quantity'] ?></td>
+                        <td class="text-center text-sm">₱<?php echo number_format($roww['quantity'] * $roww['price']) ?></td>
                     </tr>
                     <?php endwhile; ?>
                     <?php endwhile; ?>
                     <?php if($qry->num_rows <= 0): ?>
                     <tr>
-                        <td class="text-center" colspan="6">No Data...</td>
+                        <td class="text-center text-sm" colspan="6">No Data...</td>
                     </tr>
                     <?php endif; ?>
                 </tbody>
@@ -92,8 +92,8 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
                 ?>
                   <tfoot>
                     <tr>
-                        <th colspan='5'  class="text-right">Total</th>
-                        <th class="text-right">₱<?php  echo number_format($sales); ?></th>
+                        <th colspan='5' class="text-center text-sm">Total</th>
+                        <th class="text-center text-sm">₱<?php  echo number_format($sales); ?></th>
                     </tr>
                 </tfoot>
             </table>

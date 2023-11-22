@@ -12,7 +12,7 @@
   }
 </style>
 <!-- Navbar -->
-      <nav class="main-header navbar navbar-expand navbar-dark border border-light border-top-0  border-left-0 border-right-0 navbar-light text-sm">
+      <nav class="main-header navbar navbar-expand navbar-primary border border-warning border-top-0  border-left-0 border-right-0 navbar-dark text-sm">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">

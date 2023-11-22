@@ -9,10 +9,10 @@
 	</script>
 <?php endif; ?>
 <div class="card card-outline card-primary">
-	<div class="card-header">
+	<div class="card-header bg-white">
 			<h3 class="card-title">List of Users</h3>
 		</div>
-		<div class="card-body">
+		<div class="card-body bg-white">
 			<div class="container-fluid">
 				<div class="container-fluid">
 					<table class="table table-bordered table-stripped">
@@ -27,14 +27,14 @@
 						</colgroup>
 						<thead>
 							<tr>
-								<th>#</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Contact</th>
-								<th>Email</th>
-								<th>Delivery Address</th>
-								<th>Date Created</th>
-								<th>Action</th>
+								<th class="text-center text-sm">#</th>
+								<th class="text-center text-sm">First Name</th>
+								<th class="text-center text-sm">Last Name</th>
+								<th class="text-center text-sm">Contact</th>
+								<th class="text-center text-sm">Email</th>
+								<th class="text-center text-sm">Address</th>
+								<th class="text-center text-sm">Date Created</th>
+								<th class="text-center text-sm">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -43,22 +43,25 @@
 							while ($row = $qry->fetch_assoc()) :
 							?>
 								<tr>
-									<td class="text-center"><?php echo $row['id'] ?></td>
-									<td><?php echo $row['firstname'] ?></td>
-									<td><?php echo $row['lastname'] ?></td>
-									<td><?php echo $row['contact'] ?></td>
-									<td><?php echo $row['email'] ?></td>
-									<td><?php echo $row['default_delivery_address'] ?></td>
-									<td><?php echo $row['date_created'] ?></td>
+									<td class="text-center text-sm"><?php echo $row['id'] ?></td>
+									<td class="text-center text-sm"><?php echo $row['firstname'] ?></td>
+									<td class="text-center text-sm"><?php echo $row['lastname'] ?></td>
+									<td class="text-center text-sm"><?php echo $row['contact'] ?></td>
+									<td class="text-center text-sm"><?php echo $row['email'] ?></td>
+									<td class="text-center text-sm"><?php echo $row['default_delivery_address'] ?></td>
+									<td class="text-center text-sm"><?php echo $row['date_created'] ?></td>
 
 									<td align="center">
 										<button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 											Action
 											<span class="sr-only">Toggle Dropdown</span>
 										</button>
-										<div class="dropdown-menu" role="menu">
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
+										<div class="dropdown-menu bg-white" role="menu">
+											<div class="dropdown-divider bg-white"></div>
+											<a class="dropdown-item delete_data " href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">
+											<span class="fa fa-trash text-danger"></span> 
+											Delete
+											</a>
 										</div>
 									</td>
 								</tr>

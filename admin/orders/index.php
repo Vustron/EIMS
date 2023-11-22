@@ -30,13 +30,13 @@
 				</colgroup>
 				<thead>
 					<tr>
-						<th>#</th>
-						<th>Date Order</th>
-						<th>Client</th>
-						<th>Total Amount</th>
-						<th>Paid</th>
-						<th>Status</th>
-						<th>Action</th>
+						<th class="text-center text-sm">#</th>
+						<th class="text-center text-sm">Date Order</th>
+						<th class="text-center text-sm">Client</th>
+						<th class="text-center text-sm">Total Amount</th>
+						<th class="text-center text-sm">Paid</th>
+						<th class="text-center text-sm">Status</th>
+						<th class="text-center text-sm">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -46,18 +46,18 @@
 						while($row = $qry->fetch_assoc()):
 					?>
 						<tr>
-							<td class="text-center"><?php echo $i++; ?></td>
+							<td class="text-center text-sm"><?php echo $i++; ?></td>
 							<td><?php echo date("Y-m-d H:i",strtotime($row['date_created'])) ?></td>
 							<td><?php echo $row['client'] ?></td>
-							<td class="text-right">₱<?php echo number_format($row['amount']) ?></td>
-							<td class="text-center">
+							<td class="text-center text-sm">₱<?php echo number_format($row['amount']) ?></td>
+							<td class="text-center text-sm">
                                 <?php if($row['paid'] == 0): ?>
                                     <span class="badge badge-light">No</span>
                                 <?php else: ?>
                                     <span class="badge badge-success">Yes</span>
                                 <?php endif; ?>
                             </td>
-							<td class="text-center">
+							<td class="text-center text-sm">
                                 <?php if($row['status'] == 0): ?>
                                     <span class="badge badge-light">Pending</span>
                                 <?php elseif($row['status'] == 1): ?>

@@ -4,13 +4,13 @@
 </script>
 <?php endif;?>
 <div class="card card-outline card-primary">
-	<div class="card-header">
+	<div class="card-header bg-white">
 		<h3 class="card-title">List of Products</h3>
 		<div class="card-tools">
 			<a href="?page=product/manage_product" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
 		</div>
 	</div>
-	<div class="card-body">
+	<div class="card-body bg-white">
 		<div class="container-fluid">
         <div class="container-fluid">
 			<table class="table table-bordered table-stripped">
@@ -24,12 +24,12 @@
 				</colgroup>
 				<thead>
 					<tr>
-						<th>#</th>
-						<th>Date Created</th>
-						<th>Title</th>
-						<th>Author</th>
-						<th>Status</th>
-						<th>Action</th>
+						<th class="text-center text-sm">#</th>
+						<th class="text-center text-sm">Date Created</th>
+						<th class="text-center text-sm">Title</th>
+						<th class="text-center text-sm">Author</th>
+						<th class="text-center text-sm">Status</th>
+						<th class="text-center text-sm">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -59,7 +59,7 @@
 				                  		Action
 				                    <span class="sr-only">Toggle Dropdown</span>
 				                  </button>
-				                  <div class="dropdown-menu" role="menu">
+				                  <div class="dropdown-menu bg-white" role="menu">
 				                    <a class="dropdown-item" href="?page=product/manage_product&id=<?php echo $row['id'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
 				                    <div class="dropdown-divider"></div>
 				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
